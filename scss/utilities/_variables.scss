@@ -1,0 +1,32 @@
+//=============================================================================
+// Font Variables
+//=============================================================================
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC);
+$main-font: 'Noto Sans TC', sans-serif;
+$base-font-size: 16px;
+
+
+//=============================================================================
+// Color Variables
+//=============================================================================
+$white: #FFF;
+$black: #120F15;
+$grey: #615E64;
+$turquoise: #4EDB1;
+$dodger-blue: #1ABCFF;
+$carribean-green: #0DDE88;
+$froly: #F37297;
+$tan-hide: #F7945E;
+$amethyst: #A068CA;
+
+$color-accent-primary: $turquoise;
+$color-accent-secondary: $dodger-blue;
+
+//=============================================================================
+// Breakpoints
+//=============================================================================
+
+$breakpoint-s: 1px;
+$breakpoint-m: 480px;
+$breakpoint-l: 1400px;

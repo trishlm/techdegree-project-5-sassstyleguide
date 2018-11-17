@@ -1,0 +1,16 @@
+//==============================================================================
+// Base styles for universal selector, unordered lists, and paragraph tags
+//==============================================================================
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-size: $base-font-size;
+  font-weight: $font-weight-regular;
+}

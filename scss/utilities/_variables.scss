@@ -2,18 +2,21 @@
 // Font Variables
 //=============================================================================
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC);
-$main-font: 'Noto Sans TC', sans-serif;
+$font-google: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+$main-font: 'Lato', sans-serif;
+
 $base-font-size: 16px;
 
-
+$font-weight-thin: 300;
+$font-weight-regular: 400;
+$font-weight-think: 700;
 //=============================================================================
 // Color Variables
 //=============================================================================
 $white: #FFF;
 $black: #120F15;
 $grey: #615E64;
-$turquoise: #4EDB1;
+$turquoise: #30D5C8;
 $dodger-blue: #1ABCFF;
 $carribean-green: #0DDE88;
 $froly: #F37297;

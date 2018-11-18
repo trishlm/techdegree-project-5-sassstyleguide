@@ -1,0 +1,15 @@
+//==============================================================================
+// BEM-Block Element Modifier Mixins
+//==============================================================================
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

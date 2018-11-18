@@ -1,0 +1,7 @@
+//==============================================================================
+// Function to convert pixels to em units
+//==============================================================================
+
+@function emcalc($target, $context: $base-font-size) {
+  @return($target/$context) * 1em;
+}

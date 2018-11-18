@@ -4,6 +4,13 @@
   color: #1ABCFF;
   font-weight: 700; }
 
+.img--logo, .img--frame, .img--avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
 .headline--primary {
   text-align: center;
   color: #30D5C8;
@@ -335,7 +342,7 @@ p {
   padding: 50px 100px 50px; }
 
 .blockquote {
-  font-size: 24px;
+  font-size: 1.5em;
   border-left: 5px solid #30D5C8;
   font-style: italic;
   padding-left: 15px;

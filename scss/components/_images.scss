@@ -1,3 +1,17 @@
 //=============================================================================
 // Image Styles
 //=============================================================================
+
+.img {
+  @include modifier(logo) {
+    @extend %pics;
+  }
+  @include modifier(frame) {
+    @extend %pics;
+
+  }
+  @include modifier(avatar) {
+    @extend %pics;
+
+  }
+}

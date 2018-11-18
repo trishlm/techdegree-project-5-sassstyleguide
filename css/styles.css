@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+.link {
+  text-decoration: none;
+  color: #1ABCFF;
+  font-weight: 700; }
+
+.headline--primary {
+  text-align: center;
+  color: #30D5C8;
+  font-weight: 700; }
+
+.headline--secondary {
+  font-weight: 300;
+  color: #615E64; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -319,5 +333,12 @@ p {
   font-family: "Lato", sans-serif;
   max-width: 100%;
   padding: 50px 100px 50px; }
+
+.blockquote {
+  font-size: 24px;
+  border-left: 5px solid #30D5C8;
+  font-style: italic;
+  padding-left: 15px;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=styles.css.map */

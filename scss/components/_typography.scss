@@ -7,7 +7,7 @@
 }
 
 //=============================================================================
-// Container Typography
+// Container Typography (.container)
 //=============================================================================
 
 .container {
@@ -19,13 +19,31 @@
 
 
 //=============================================================================
-// Link Typography
+// Link Typography (.link)
 //=============================================================================
+.link {
+  @extend %links;
+}
 
 //=============================================================================
-// Blockquote Typography
+// Blockquote Typography (.blockquote)
 //=============================================================================
+.blockquote {
+  font-size: 24px;
+  border-left: 5px solid $color-accent-primary;
+  font-style: italic;
+  padding-left: 15px;
+  border-radius: 5px;
+}
 
 //=============================================================================
-// Headlines Typography
+// Headlines Typography (.headline--primary, .headline--secondary)
 //=============================================================================
+.headline {
+  &--primary {
+    @extend %headline-prim;
+  }
+  &--secondary {
+    @extend %headline-sec;
+  }
+}

@@ -5,17 +5,32 @@
 %links {
   text-decoration: none;
   color: $color-accent-secondary;
+  font-weight: $font-weight-thick;
 }
 
 //==============================================================================
 // Placeholders for Images
 //==============================================================================
 
+// %pics {
+//   display: block;
+//   margin: auto;
+// }
 
 //==============================================================================
 // Placeholders for Headlines
 //==============================================================================
 
+%headline-prim {
+  text-align: center;
+  color: $color-accent-primary;
+  font-weight: $font-weight-thick;
+}
+
+%headline-sec {
+  font-weight: $font-weight-thin;
+  color: $grey;
+}
 //==============================================================================
 // Placeholders for Navigation Items
 //==============================================================================

@@ -12,6 +12,7 @@
 // Placeholders for Images
 //==============================================================================
 
+
 %pics {
   display: block;
   margin-left: auto;
@@ -42,4 +43,26 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+//==============================================================================
+// Center Item
+//==============================================================================
+%center-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//==============================================================================
+// Screen Reader Text
+//==============================================================================
+%srt {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }

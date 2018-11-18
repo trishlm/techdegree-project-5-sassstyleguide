@@ -1,14 +1,41 @@
 //=============================================================================
-// Form Styles (general)
+// Form Styles
 //=============================================================================
 
+.form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @include element(input) {
+    display: flex;
+    @extend %center-item;
+    border: 0;
+    border-bottom: 5px solid $color-accent-primary;
+    border-radius: $border-rds;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: emcalc(12px);
+    font-weight: $font-weight-thick;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: $grey;
+    &:focus {
+      color: $grey;
+      background-color: $color-accent-primary;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      transition: all .5s ease;
+      font-size: emcalc(20px);
+      font-weight: $font-weight-thick;
 
-
-//=============================================================================
-// Form Input Styles
-//=============================================================================
-
-
-//=============================================================================
-// Form Label Styles
-//=============================================================================
+    }
+  }
+  @include element(label) {
+      @include modifier(hidden) {
+        @extend %srt;
+      }
+      display: block;
+      @extend %center-item;
+  }
+}

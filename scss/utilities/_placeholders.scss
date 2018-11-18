@@ -35,5 +35,11 @@
   color: $grey;
 }
 //==============================================================================
-// Placeholders for Navigation Items
+// Placeholders for Navigation Item Container
 //==============================================================================
+
+%nav-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

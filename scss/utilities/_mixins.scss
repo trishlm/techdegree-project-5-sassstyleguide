@@ -13,3 +13,15 @@
     @content;
   }
 }
+
+//==============================================================================
+// Color Map Mixin
+//==============================================================================
+
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    @include modifier($theme) {
+      background-color: $color;
+    }
+  }
+}

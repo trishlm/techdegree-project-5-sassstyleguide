@@ -66,3 +66,34 @@
 	position: absolute;
 	width: 1px;
 }
+
+//==============================================================================
+// Placeholder for Transitions
+//==============================================================================
+
+%trans {
+  transition: all .5s ease;
+}
+
+//==============================================================================
+// Placeholder for Button Styles
+//==============================================================================
+
+%btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius: $border-rds;
+  color: $white;
+  text-transform: uppercase;
+  font-size: emcalc(14px);
+  font-weight: $font-weight-thick;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}

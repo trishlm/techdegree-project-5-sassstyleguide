@@ -11,10 +11,9 @@
     border: 0;
     border-bottom: 5px solid $color-accent-primary;
     border-radius: $border-rds;
-    width: 95%;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: emcalc(12px);
     font-weight: $font-weight-thick;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -23,12 +22,9 @@
     &:focus {
       color: $grey;
       background-color: $color-accent-primary;
-      -webkit-transition: all .5s ease;
-      -moz-transition: all .5s ease;
-      transition: all .5s ease;
       font-size: emcalc(20px);
       font-weight: $font-weight-thick;
-
+      @extend %trans;
     }
   }
   @include element(label) {

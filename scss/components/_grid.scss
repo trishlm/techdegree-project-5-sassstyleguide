@@ -14,61 +14,48 @@
   }
 }
 
-[class^="grid__col--"] {
-  // @extend %nav-flex;
-  border-radius: $border-rds;
-  font-size: emcalc(14px);
-  margin-bottom: 20px;
-  min-height: 45px;
+
+
+.container {
+  @extend %clearfix;
+  @extend .centered;
 }
 
-.grid {
-  &__row {
-    vertical-align: bottom;
-  }
-}
-//========================Calculate Grid Columns================================
-
-
-
-// .grid__col {
-//   @include medquery(medium) {
-//     @include g-columns;
-//   }
-// }
-
-// [class^="grid__col--"] {
-//   @include medquery(medium) {
-//     @include doubly(percentage($g-gutter-width / $context));
-//     min-height: 1px;
-//     float: left;
-//     padding-left: 10px;
-//     padding-right: 10px;
-//     &:last-of-type {
-//       float: right;
-//     }
-//   }
-// }
-
-// .container {
-//   @extend %clearfix;
-//   @extend .centered;
-// }
-
-//========================Calculate Grid Rows+++================================
+//========================Calculate Grid Rows================================
 
 // .grid {
-//   &__row {
+// 	&__row {
+//     padding-top: 5x;
+//     padding-bottom: 5px;
+//     justify-content: space-between;
 //     @extend %nav-flex;
-//     @extend %clearfix;
-//     @extend .centered;
-//     justify-content: centered;
-//     &--12 {
-//       @extend %nav-flex;
-//       justify-content: centered;
-//     }
-//     @include medquery(large) {
-//       max-width: $g-cont-max-w;
-//     }
+//     // @extend .centered;
+//     width: 100%;
+//   }
+//   &--12 {
+//     padding-left: 30px;
+//     padding-right: 30px;
+//     justify-content: space-between;
+//     @extend %nav-flex;
+//   }
+//   @include medquery(large) {
+//     max-width: $g-cont-max-w;
 //   }
 // }
+//
+//
+// .grid__col {
+// 	@include medquery(medium) {
+// 		@include g-columns;
+// 	}
+// }
+[class^="grid__col--"] {
+  border-radius: $border-rds;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  min-height: 45px;
+  padding-top: 20px;
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
+}

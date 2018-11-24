@@ -25,3 +25,83 @@
     }
   }
 }
+
+//==============================================================================
+// Grid Color Mixin
+//==============================================================================
+
+@mixin grid-colors($map) {
+  $i : 1;
+  @each $color in $map {
+    @include element("col--#{$i}") {
+      background-color: $color;
+      color: $grey;
+      text-align: left;
+    }
+    $i : $i + 1;
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================
+// Grid Column Mixin
+//==============================================================================
+
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    //Generates column for modifier classes
+    &--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// Mixin for adjacent siblings
+@mixin doubly($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+//==============================================================================
+// Media Query Mixin
+//==============================================================================
+
+@mixin medquery($break) {
+  @if $break == "small" {
+    @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $breakpoint-m + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $breakpoint-l) {
+      @content;
+    }
+  }
+  @else {
+    @error "'#{$break}' is an invalid. Valid options are 'small', 'medium' or 'large' only."
+  }
+}

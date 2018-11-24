@@ -5,3 +5,12 @@
 @function emcalc($target, $context: $base-font-size) {
   @return($target/$context) * 1em;
 }
+
+//==============================================================================
+// Function that establishes a base content width for the grid
+//==============================================================================
+
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+  @return $g-context;
+}

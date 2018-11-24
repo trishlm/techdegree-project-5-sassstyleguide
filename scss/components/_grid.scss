@@ -1,3 +1,74 @@
 //=============================================================================
 // Grid Styles (.container, .grid__row, .grid__col, .centered, .theme__colors)
 //=============================================================================
+
+//Color them for g-columns
+.theme__colors.grid {
+  @include grid-colors($grid-colors);
+}
+
+.centered {
+  @include medquery(medium) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+[class^="grid__col--"] {
+  // @extend %nav-flex;
+  border-radius: $border-rds;
+  font-size: emcalc(14px);
+  margin-bottom: 20px;
+  min-height: 45px;
+}
+
+.grid {
+  &__row {
+    vertical-align: bottom;
+  }
+}
+//========================Calculate Grid Columns================================
+
+
+
+// .grid__col {
+//   @include medquery(medium) {
+//     @include g-columns;
+//   }
+// }
+
+// [class^="grid__col--"] {
+//   @include medquery(medium) {
+//     @include doubly(percentage($g-gutter-width / $context));
+//     min-height: 1px;
+//     float: left;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     &:last-of-type {
+//       float: right;
+//     }
+//   }
+// }
+
+// .container {
+//   @extend %clearfix;
+//   @extend .centered;
+// }
+
+//========================Calculate Grid Rows+++================================
+
+// .grid {
+//   &__row {
+//     @extend %nav-flex;
+//     @extend %clearfix;
+//     @extend .centered;
+//     justify-content: centered;
+//     &--12 {
+//       @extend %nav-flex;
+//       justify-content: centered;
+//     }
+//     @include medquery(large) {
+//       max-width: $g-cont-max-w;
+//     }
+//   }
+// }

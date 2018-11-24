@@ -51,7 +51,6 @@
   font-size: 0.875em;
   font-weight: 700;
   width: 100%;
-  margin-bottom: 20px;
   margin-bottom: 20px; }
   [class^="btn--"]:hover {
     opacity: .75; }
@@ -420,6 +419,69 @@ p {
       font-weight: 700; }
   .form__label {
     display: block; }
+
+.theme__colors.grid__col--1 {
+  background-color: #120F15;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--2 {
+  background-color: #FFF;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--3 {
+  background-color: #DDAFE9;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--4 {
+  background-color: #1ABCFF;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--5 {
+  background-color: #0DDE88;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--6 {
+  background-color: #1493CC;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--7 {
+  background-color: #F37297;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--8 {
+  background-color: #F7945E;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--9 {
+  background-color: #A068CA;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--10 {
+  background-color: #615E64;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--11 {
+  background-color: #1493CC;
+  color: #615E64;
+  text-align: left; }
+.theme__colors.grid__col--12 {
+  background-color: #50E3C2;
+  color: #615E64;
+  text-align: left; }
+
+@media (min-width: 481px) {
+  .centered {
+    margin-left: auto;
+    margin-right: auto; } }
+
+[class^="grid__col--"] {
+  border-radius: 5px;
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  min-height: 45px; }
+
+.grid__row {
+  vertical-align: bottom; }
 
 .img--frame {
   border: 1px solid #c7c5c9;

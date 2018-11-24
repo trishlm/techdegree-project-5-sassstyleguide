@@ -22,6 +22,10 @@ $carribean-green: #0DDE88;
 $froly: #F37297;
 $tan-hide: #F7945E;
 $amethyst: #A068CA;
+$curious-blue: #1493CC;
+$french-lilac: #DDAFE9;
+$bright-turquoise: #26EDBC;
+$london-hue: #CFAED0;
 
 $color-accent-primary: $turquoise;
 $color-accent-secondary: $dodger-blue;
@@ -50,4 +54,31 @@ $ui-colors: (
   error: $froly,
   warning: $tan-hide,
   info: $amethyst
+);
+
+//==============================================================================
+// Variable for Grid Structure
+//==============================================================================
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-max-w: 1400px;
+
+//==============================================================================
+// Variable for Grid Colors
+//==============================================================================
+
+$grid-colors: (
+  $black,
+  $white,
+  $french-lilac,
+  $dodger-blue,
+  $carribean-green,
+  $curious-blue,
+  $froly,
+  $tan-hide,
+  $amethyst,
+  $grey,
+  $curious-blue,
+  $turquoise,
 );

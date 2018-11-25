@@ -20,12 +20,11 @@
   font-weight: 300;
   color: #615E64; }
 
-[class^="btn--"], .grid__row, .nav {
+.grid__col--12, .grid__row, .nav {
   display: flex;
-  flex-direction: column;
-  text-align: center; }
+  flex-direction: column; }
   @media (min-width: 770px) {
-    [class^="btn--"], .grid__row, .nav {
+    .grid__col--12, .grid__row, .nav {
       flex-direction: row; } }
 
 .form__input, .form__label {
@@ -60,11 +59,8 @@
     opacity: .75; }
   [class^="btn--"]:active {
     opacity: initial; }
-  @media (min-width: 770px) {
-    [class^="btn--"] {
-      flex-direction: row; } }
 
-.container:after, .grid__row:after {
+[class^="btn--"]:after, .container:after, .grid__row:after {
   content: "";
   display: table;
   clear: both; }
@@ -525,14 +521,17 @@ p {
     width: 91.5%; }
   .grid__col--12 {
     width: 100%; } }
+.grid__col--12 {
+  width: 100%;
+  justify-content: space-between; }
 
 .grid__row {
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap; }
-@media (min-width: 1400px) {
-  .grid {
-    max-width: 1400px; } }
+  @media (min-width: 1400px) {
+    .grid__row {
+      max-width: 1400px; } }
 
 .img--frame {
   border: 1px solid #c7c5c9;
@@ -544,7 +543,8 @@ p {
 .nav {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 0; }
+  padding-left: 0;
+  text-align: center; }
   @media (min-width: 770px) {
     .nav {
       justify-content: flex-end; } }

@@ -43,7 +43,7 @@
 %nav-flex {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  // text-align: center;
   @include medquery(medium) {
     flex-direction: row;
   //   justify-content: flex-end;
@@ -85,6 +85,8 @@
 //==============================================================================
 
 %btn {
+  // @extend %nav-flex;
+
   padding: 15px 30px;
   border: 0;
   border-radius: $border-rds;
@@ -95,15 +97,14 @@
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
+  // display: block;
   &:hover {
     opacity: .75;
   }
   &:active {
     opacity: initial;
   }
-  @include medquery(medium) {
-    flex-direction: row;
-  }
+
 }
 
 //==============================================================================

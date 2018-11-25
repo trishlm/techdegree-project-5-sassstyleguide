@@ -6,6 +6,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
   padding-left: 0;
+  @include medquery(medium) {
+      justify-content: flex-end;
+  }
   @extend %nav-flex;
   @include element(item) {
       a {

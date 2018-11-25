@@ -13,49 +13,48 @@
     margin-right: auto;
   }
 }
-
-
-
 .container {
   @extend %clearfix;
   @extend .centered;
 }
 
 //========================Calculate Grid Rows================================
-
-// .grid {
-// 	&__row {
-//     padding-top: 5x;
-//     padding-bottom: 5px;
-//     justify-content: space-between;
-//     @extend %nav-flex;
-//     // @extend .centered;
-//     width: 100%;
-//   }
-//   &--12 {
-//     padding-left: 30px;
-//     padding-right: 30px;
-//     justify-content: space-between;
-//     @extend %nav-flex;
-//   }
-//   @include medquery(large) {
-//     max-width: $g-cont-max-w;
-//   }
-// }
-//
-//
-// .grid__col {
-// 	@include medquery(medium) {
-// 		@include g-columns;
-// 	}
-// }
 [class^="grid__col--"] {
   border-radius: $border-rds;
   margin-bottom: 20px;
-  margin-top: 10px;
+  // margin-top: 10px;
   min-height: 45px;
   padding-top: 20px;
   &:last-of-type {
     margin-bottom: 50px;
+  }
+  @include medquery(medium) {
+    margin-bottom: 50px;
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+
+
+}
+
+.grid__col {
+	@include medquery(medium) {
+		@include g-columns;
+	}
+}
+
+.grid {
+  &__row {
+    @extend %clearfix;
+    // @extend .centered;
+    @extend %nav-flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @include medquery(large) {
+			max-width: $g-cont-max-w;
   }
 }

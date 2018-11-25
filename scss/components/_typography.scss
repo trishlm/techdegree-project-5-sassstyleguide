@@ -14,8 +14,11 @@
   font-size: $base-font-size;
   font-family: $main-font;
   max-width: 100%;
-  padding: 50px 100px 500px;
+  padding: 0px 100px 50px;
   color: $grey;
+  @include medquery(medium) {
+    padding: 0px 100px 50px;
+  }
 }
 
 

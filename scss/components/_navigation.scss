@@ -3,15 +3,14 @@
 //=============================================================================
 
 .nav {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding-left: 0;
   text-align: center;
   @extend %nav-flex;
   @include medquery(medium) {
-
+      margin-top: 50px;
       justify-content: flex-end;
-
   }
   @include element(item) {
       a {
@@ -28,10 +27,7 @@
         color: $white;
         font-weight: $font-weight-thick;
         font-size: emcalc(20px);
-
       }
     }
   }
-
-
 }

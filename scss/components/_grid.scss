@@ -7,14 +7,6 @@
   @include grid-colors($grid-colors);
 }
 
-.centered {
-  @include medquery(medium) {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-  }
-}
-
 .container {
   @extend %clearfix;
   @extend .centered;
@@ -38,7 +30,7 @@
 .grid {
   &__row {
     @extend %clearfix;
-    @extend .centered;
+    // @extend .centered;
     justify-content: space-between;
     padding-top: 20px;
     }
@@ -59,65 +51,19 @@
     border-radius: $border-rds;
     min-height: 45px;
     padding-top: 12px;
+
+    margin: auto;
   }
 }
 
-
-//THIS WORKS================
-.grid__col--12 {
-  @extend %nav-flex;
-
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
 }
 
-
-// .grid__row {
-//   & .grid__col {
-//     &:last-of-type {
-//       @extend %nav-flex;
-//       justify-content: space-between;
-//     }
-//   }
-// }
-
-//========================Calculate Grid Rows===================================
-////DO NOT DELETE THIS SECION--DO NOT DELETE THIS SECION========================
-// [class^="grid__col--"] {
-//   border-radius: $border-rds;
-//   margin-bottom: 10px;
-//   min-height: 45px;
-//   padding-top: 20px;
-//   @extend %nav-flex;  //This code
-//   &:last-of-type {
-//     margin-bottom: 30px;
-//   }
-//   @include medquery(medium) {
-//     margin-bottom: 50px;
-//     &:last-of-type {
-//       margin-bottom: 50px;
-//     }
-//   }
-// }
-//
-// .grid__col {
-//     @extend %nav-flex;
-// 	@include medquery(medium) {
-// 		@include g-columns;
-// 	}
-// }
-//
-// .grid {
-//   &__row {
-//     @extend %clearfix;
-//     @extend .centered;
-//     @extend %nav-flex;
-//     width: 100%;
-//     justify-content: space-between;
-//
-//   @include medquery(large) {
-// 			max-width: $g-cont-max-w;
-//       }
-//   }
-// }
-
-////DO NOT DELETE THIS SECION--DO NOT DELETE THIS SECION========================
-//========================Calculate Grid Rows===================================
+[class^="grid__col--"] {
+    @include medquery(medium) {
+      @include flexcont (flex, $direction: row, $wrap: null, $justify: space-around);
+  }
+}

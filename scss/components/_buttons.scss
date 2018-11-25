@@ -4,7 +4,6 @@
 [class^="btn--"] {
   @extend %btn;
   @extend %clearfix;
-  // @extend %nav-flex;
   justify-content: center;
   @include medquery(medium) {
     width: 95%;

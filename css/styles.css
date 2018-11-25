@@ -20,11 +20,11 @@
   font-weight: 300;
   color: #615E64; }
 
-.grid__col--12, .grid__row, .nav {
+.grid__col--12, .nav {
   display: flex;
   flex-direction: column; }
   @media (min-width: 770px) {
-    .grid__col--12, .grid__row, .nav {
+    .grid__col--12, .nav {
       flex-direction: row; } }
 
 .form__input, .form__label {
@@ -54,6 +54,9 @@
   font-weight: 700;
   width: 100%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center; }
   [class^="btn--"]:hover {
     opacity: .75; }
@@ -394,6 +397,14 @@ p {
   padding-left: 15px;
   border-radius: 5px; }
 
+[class^="btn--"] {
+  justify-content: center; }
+  @media (min-width: 770px) {
+    [class^="btn--"] {
+      width: 95%;
+      margin-left: 10px;
+      margin-right: 10px; } }
+
 .theme__colors.btn--default {
   background-color: #1ABCFF; }
 .theme__colors.btn--success {
@@ -479,23 +490,19 @@ p {
   text-align: left; }
 
 @media (min-width: 770px) {
-  .centered, .container {
+  .centered, .container, .grid__row {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto;
+    float: none; } }
+
+.container {
+  width: 100%; }
 
 [class^="grid__col--"] {
-  border-radius: 5px;
-  margin-bottom: 20px;
-  min-height: 45px;
-  padding-top: 20px; }
-  [class^="grid__col--"]:last-of-type {
-    margin-bottom: 50px; }
-  @media (min-width: 770px) {
-    [class^="grid__col--"] {
-      margin-bottom: 50px; }
-      [class^="grid__col--"]:last-of-type {
-        margin-bottom: 50px; } }
+  width: 100%; }
 
+@media (min-width: 1400px) {
+  max-width: 1400px; }
 @media (min-width: 770px) {
   .grid__col--1 {
     width: 6.5%; }
@@ -521,17 +528,26 @@ p {
     width: 91.5%; }
   .grid__col--12 {
     width: 100%; } }
-.grid__col--12 {
-  width: 100%;
-  justify-content: space-between; }
 
 .grid__row {
-  width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap; }
-  @media (min-width: 1400px) {
-    .grid__row {
-      max-width: 1400px; } }
+  padding-top: 20px; }
+
+@media (min-width: 1px) and (max-width: 769px) {
+  [class^="grid__col--"] {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    min-height: 45px;
+    border-radius: 5px;
+    padding-top: 20px; } }
+@media (min-width: 770px) {
+  [class^="grid__col--"] {
+    float: left;
+    border-radius: 5px;
+    min-height: 45px;
+    padding-top: 12px; }
+    [class^="grid__col--"] + [class^="grid__col--"] {
+      margin-left: 2%; } }
 
 .img--frame {
   border: 1px solid #c7c5c9;

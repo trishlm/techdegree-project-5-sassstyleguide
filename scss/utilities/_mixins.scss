@@ -91,3 +91,13 @@
     @error "'#{$break}' is an invalid. Valid options are 'small', 'medium' or 'large' only."
   }
 }
+//==============================================================================
+// Mixin for Flexbx settings
+//==============================================================================
+
+@mixin flexcont ($display: flex, $direction: null, $wrap: null, $justify: null) {
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}

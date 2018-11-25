@@ -11,61 +11,113 @@
   @include medquery(medium) {
     margin-left: auto;
     margin-right: auto;
+    float: none;
   }
 }
+
 .container {
   @extend %clearfix;
   @extend .centered;
+  width: 100%;
+}
+//===============Updated Calculate Grid Rows===================================
+[class^="grid__col--"] {
+  width: 100%;
 }
 
-//========================Calculate Grid Rows================================
-[class^="grid__col--"] {
-  border-radius: $border-rds;
-  margin-bottom: 20px;
-  // margin-top: 10px;
-  min-height: 45px;
-  padding-top: 20px;
-  &:last-of-type {
-    margin-bottom: 50px;
-  }
-  @include medquery(medium) {
-    margin-bottom: 50px;
-    &:last-of-type {
-      margin-bottom: 50px;
-    }
-  }
-
-
-
+@include medquery(large) {
+  max-width: $g-cont-max-w;
 }
 
 .grid__col {
-	@include medquery(medium) {
-		@include g-columns;
-	}
-  &--12 {
-    @extend %nav-flex;
-    width: 100%;
-    justify-content: space-between;
-    // padding-left: 15px;
-    // padding-right: 15px;
-    // margin-left: 15px;
-    // margin-right: 15px;
+  @include medquery(medium) {
+    @include g-columns;
   }
 }
 
 .grid {
   &__row {
     @extend %clearfix;
-    // @extend .centered;
-    @extend %nav-flex;
-    width: 100%;
+    @extend .centered;
     justify-content: space-between;
-    flex-wrap: wrap;
+    padding-top: 20px;
+    }
+  }
 
+[class^="grid__col--"] {
 
-  @include medquery(large) {
-			max-width: $g-cont-max-w;
-      }
+  @include medquery(small) {
+    margin-top: emcalc(12px);
+    margin-bottom: emcalc(12px);
+    min-height: 45px;
+    border-radius: $border-rds;
+    padding-top: 20px;
+  }
+  @include medquery(medium) {
+    @include doubly(percentage($g-gutter-width/ $context));
+    float: left;
+    border-radius: $border-rds;
+    min-height: 45px;
+    padding-top: 12px;
   }
 }
+
+
+//THIS WORKS================
+.grid__col--12 {
+  @extend %nav-flex;
+
+}
+
+
+// .grid__row {
+//   & .grid__col {
+//     &:last-of-type {
+//       @extend %nav-flex;
+//       justify-content: space-between;
+//     }
+//   }
+// }
+
+//========================Calculate Grid Rows===================================
+////DO NOT DELETE THIS SECION--DO NOT DELETE THIS SECION========================
+// [class^="grid__col--"] {
+//   border-radius: $border-rds;
+//   margin-bottom: 10px;
+//   min-height: 45px;
+//   padding-top: 20px;
+//   @extend %nav-flex;  //This code
+//   &:last-of-type {
+//     margin-bottom: 30px;
+//   }
+//   @include medquery(medium) {
+//     margin-bottom: 50px;
+//     &:last-of-type {
+//       margin-bottom: 50px;
+//     }
+//   }
+// }
+//
+// .grid__col {
+//     @extend %nav-flex;
+// 	@include medquery(medium) {
+// 		@include g-columns;
+// 	}
+// }
+//
+// .grid {
+//   &__row {
+//     @extend %clearfix;
+//     @extend .centered;
+//     @extend %nav-flex;
+//     width: 100%;
+//     justify-content: space-between;
+//
+//   @include medquery(large) {
+// 			max-width: $g-cont-max-w;
+//       }
+//   }
+// }
+
+////DO NOT DELETE THIS SECION--DO NOT DELETE THIS SECION========================
+//========================Calculate Grid Rows===================================

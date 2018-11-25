@@ -2,14 +2,16 @@
 // Button Styles
 //=============================================================================
 [class^="btn--"] {
-  @extend %clearfix;
   @extend %btn;
-
-
+  @extend %clearfix;
+  // @extend %nav-flex;
+  justify-content: center;
+  @include medquery(medium) {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-
-
-
+}
 
 //=============================================================================
 // Theme Color Styles

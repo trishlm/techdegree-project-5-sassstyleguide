@@ -6,7 +6,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   @include element(input) {
-    display: flex;
+    @extend %nav-flex;
     @extend %center-item;
     border: 0;
     border-bottom: 5px solid $color-accent-primary;

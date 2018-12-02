@@ -20,11 +20,11 @@
   font-weight: 300;
   color: #615E64; }
 
-.nav {
+.form__input {
   display: flex;
   flex-direction: column; }
-  @media (min-width: 770px) {
-    .nav {
+  @media (min-width: 481px) {
+    .form__input {
       flex-direction: row; } }
 
 .form__input, .form__label {
@@ -389,7 +389,7 @@ p {
   max-width: 100%;
   padding: 0px 100px 50px;
   color: #615E64; }
-  @media (min-width: 770px) {
+  @media (min-width: 481px) {
     .container {
       padding: 0px 100px 50px; } }
 
@@ -402,7 +402,7 @@ p {
 
 [class^="btn--"] {
   justify-content: center; }
-  @media (min-width: 770px) {
+  @media (min-width: 481px) {
     [class^="btn--"] {
       width: 95%;
       margin-left: 10px;
@@ -423,7 +423,6 @@ p {
   margin-top: 30px;
   margin-bottom: 30px; }
   .form__input {
-    display: flex;
     border: 0;
     border-bottom: 5px solid #50E3C2;
     border-radius: 5px;
@@ -495,12 +494,9 @@ p {
 .container {
   width: 100%; }
 
-[class^="grid__col--"] {
-  width: 100%; }
-
 @media (min-width: 1400px) {
   max-width: 1400px; }
-@media (min-width: 770px) {
+@media (min-width: 481px) {
   .grid__col--1 {
     width: 6.5%; }
   .grid__col--2 {
@@ -530,14 +526,14 @@ p {
   justify-content: space-between;
   padding-top: 20px; }
 
-@media (min-width: 1px) and (max-width: 769px) {
+@media (min-width: 1px) and (max-width: 480px) {
   [class^="grid__col--"] {
     margin-top: 0.75em;
     margin-bottom: 0.75em;
     min-height: 45px;
     border-radius: 5px;
     padding-top: 20px; } }
-@media (min-width: 770px) {
+@media (min-width: 481px) {
   [class^="grid__col--"] {
     float: left;
     border-radius: 5px;
@@ -552,7 +548,7 @@ p {
   margin-right: auto;
   float: none; }
 
-@media (min-width: 770px) {
+@media (min-width: 481px) {
   [class^="grid__col--"] {
     display: flex;
     flex-direction: row;
@@ -570,9 +566,12 @@ p {
   margin-bottom: 10px;
   padding-left: 0;
   text-align: center; }
-  @media (min-width: 770px) {
+  @media (min-width: 481px) {
     .nav {
       margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: flex-end; } }
   .nav__item a {
     display: block;

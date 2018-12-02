@@ -13,9 +13,9 @@
   width: 100%;
 }
 //===============Updated Calculate Grid Rows===================================
-[class^="grid__col--"] {
-  width: 100%;
-}
+// [class^="grid__col--"] {
+//   width: 100%;
+// }
 
 @include medquery(large) {
   max-width: $g-cont-max-w;
@@ -30,7 +30,6 @@
 .grid {
   &__row {
     @extend %clearfix;
-    // @extend .centered;
     justify-content: space-between;
     padding-top: 20px;
     }
@@ -51,7 +50,7 @@
     border-radius: $border-rds;
     min-height: 45px;
     padding-top: 12px;
-
+    // @include flexcont (flex, $direction: row, $wrap: null, $justify: space-around);
     margin: auto;
   }
 }

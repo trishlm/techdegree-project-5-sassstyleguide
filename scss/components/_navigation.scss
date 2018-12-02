@@ -7,10 +7,9 @@
   margin-bottom: 10px;
   padding-left: 0;
   text-align: center;
-  @extend %nav-flex;
   @include medquery(medium) {
       margin-top: 50px;
-      justify-content: flex-end;
+      @include flexcont (flex, $direction: row, $wrap: wrap, $justify: flex-end);
   }
   @include element(item) {
       a {
